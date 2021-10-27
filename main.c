@@ -46,9 +46,7 @@ int quantidadeIngressos()
 }
 
 void totais(int quantidade)
-{
-	limparTela(); // Limpa a tela
-	
+{	
 	// Total de ingresso e valor
 	printf("Total de ingressos: %d\n", quantidade);
 	printf("Valor total: R$ %d,00\n\n", (quantidade * 5));
@@ -58,6 +56,7 @@ char formaPagamento(int quantidade)
 {
 	char forma; // Varável forma
 	
+	limparTela(); // Limpa a tela
 	totais(quantidade); // Mostra mensagem de ingresso e valor
 	
 	// Menu de opções
@@ -86,6 +85,7 @@ char confirmacao(int quantidade, char forma)
 {
 	char confirmar; // Variável confirmar
 	
+	limparTela(); // Limpa a tela
 	totais(quantidade); // Mostra mensagem de ingresso e valor
 	
 	formaDePagamento(forma); // Mostra forma de pagamento
@@ -115,12 +115,13 @@ void barra(int segundos)
 void cobranca()
 {
 	limparTela(); // Limpa a tela
-	printf("Siga as instrções da máquina de cartão.\n\n");
+	printf("Siga as instruções da máquina de cartão.\n\n");
 	barra(15); // Mostra a barra
 }
 
 void impressao(int quantidade, char forma)
 {
+	limparTela(); // Limpa a tela
 	dadosParque(); // Dados do parque
 	totais(quantidade); // Mostra mensagem de ingresso e valor
 	formaDePagamento(forma); // Mostra forma de pagamento
